@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="game-container">
+
+    <h1 class="title">Tic Tac Toe</h1>
+
+    <!-- PLAYER INPUT -->
+    <div class="player-inputs">
+      <div class="input-group">
+        <label>Player X</label>
+        <input type="text" id="playerX" placeholder="Enter Player X name">
+      </div>
+
+      <div class="input-group">
+        <label>Player O</label>
+        <input type="text" id="playerO" placeholder="Enter Player O name">
+      </div>
+
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- BOARD (NOW ABOVE) -->
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+
+    <!-- SCORE BOARD (NOW BELOW) -->
+    <div class="score-board">
+      <h2>Score Board</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Symbol</th>
+            <th>Wins</th>
+            <th>Losses</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td id="player-x-name">Player X</td>
+            <td>X</td>
+            <td id="x-wins">0</td>
+            <td id="x-losses">0</td>
+          </tr>
+
+          <tr>
+            <td id="player-o-name">Player O</td>
+            <td>O</td>
+            <td id="o-wins">0</td>
+            <td id="o-losses">0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="extra-info">
+        <p>Draws: <span id="draw-count">0</span></p>
+        <p>Turn: <span id="turn-indicator">Player X (X)</span></p>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="bottom-buttons">
+      <button id="reset-score-btn">Reset Score</button>
+    </div>
+
+  </div>
+
+  <!-- WINNER POPUP -->
+  <div class="winner-message" id="winner-message">
+    <div class="winner-box">
+      <div class="final-winner" id="final-winner">Winner</div>
+      <button id="restart-btn">Next Round</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © <span id="year"></span> Prahlad Jha
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
